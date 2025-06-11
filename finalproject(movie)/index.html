@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Gallery - Discover Your Next Favorite Show</title>
+    <meta name="description" content="An app to discover personalized movie and TV show recommendations.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="hamburger-button" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#watchlist">Watchlist</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="app">
+      <section id="preferences">
+        <h1>Set Your Preferences</h1>
+        <p>Select your favorite genres, actors, or directors to get personalized recommendations.</p>
+        <button id="set-preferences">Set Preferences</button>
+      </section>
+      <section id="search">
+        <h2>Search for Movies and TV Shows</h2>
+        <input type="text" placeholder="Search by title, genre, or actor" id="search-input" />
+        <button id="search-button">Search</button>
+      </section>
+      <section id="trending">
+        <h2>Trending Content</h2>
+        <div id="trending-content">
+          <!-- Trending movies and TV shows will be dynamically loaded here -->
+        </div>
+      </section>
+      <section id="watchlist">
+        <h2>Your Watchlist</h2>
+        <div id="watchlist-content">
+          <!-- User's watchlist items will be dynamically loaded here -->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Movie Gallery. All rights reserved.</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+/* Hamburger Button */
+#hamburger-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+}
+
+#hamburger-button:focus {
+  outline: none;
+}
+
+/* Navigation Links */
+header nav ul {
+  display: flex;
+  justify-content: center; /* Align links to the center */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px; /* Add consistent spacing between links */
+  transition: transform 0.3s ease;
+}
+
+header nav ul.hidden {
+  display: none; /* Hide navigation links in mobile view */
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #3498db; /* Add background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+#search {
+  position: relative;
+}
+
+#search-input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+/* Preferences Section */
+#preferences {
+  background-color: #ffffff;
+  border: 2px solid #3498db; /* Add a border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center;
+}
+
+#preferences h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#preferences p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#preferences button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#preferences button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Search Section */
+#search {
+  background-color: #ffffff;
+  border: 2px solid #e67e22; /* Add a border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  text-align: center;
+}
+
+#search h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#search input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 70%; /* Adjust width */
+  font-size: 16px;
+  margin-bottom: 15px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Add inner shadow */
+}
+
+#search button {
+  background-color: #e67e22;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#search button:hover {
+  background-color: #d35400;
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px; /* Reduced size */
+  color: #2c3e50; /* Darker color for better contrast */
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px; /* Reduced size */
+  color: #34495e; /* Slightly darker color */
+  margin-bottom: 15px;
+}
+
+/* Grid Layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Ensure 4 cards per row */
+  gap: 20px;
+}
+
+/* Movie Cards with Flexbox Layout */
+.content-card {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: space-between; /* Space out content vertically */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px; /* Reduced padding */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 14px;
+  position: relative;
+}
+
+.content-card img {
+  width: 100%;
+  height: 150px; /* Reduced image height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.content-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.content-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.content-card button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effects for Buttons */
+button {
+  background-color: #ff4500;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e03e00;
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Footer with Hover Glow Effect */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  transition: box-shadow 0.3s ease;
+}
+
+footer:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Glow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #search-input {
+    width: 180px;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 cards per row for smaller screens */
+  }
+
+  #hamburger-button {
+    display: block; /* Show hamburger button in mobile view */
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+  }
+
+  header nav ul.visible {
+    transform: translateY(0); /* Slide down when visible */
+  }
+}
+
+@media (max-width: 480px) {
+  #search-input {
+    width: 100%;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr; /* Single column for mobile screens */
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* Movie Details Page with Fade-In Animation */
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Movie Details Trailer with Bounce Animation */
+.movie-details iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: bounce 1.5s infinite; /* Bounce effect */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#back-button {
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background-color: #2980b9;
+}
+
+/* Trending Content with Flexbox Layout */
+#trending-content {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  gap: 20px; /* Add spacing between cards */
+  justify-content: space-between; /* Distribute cards evenly */
+}
+
+#trending-content .movie-card {
+  flex: 1 1 calc(25% - 20px); /* Ensure 4 cards per row with spacing */
+  max-width: calc(25% - 20px); /* Prevent cards from exceeding 4 per row */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#trending-content .movie-card img {
+  width: 100%;
+  height: 150px; /* Reduced image height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#trending-content .movie-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+#trending-content .movie-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+#trending-content .movie-card button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#trending-content .movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Trending Content */
+@media (max-width: 768px) {
+  #trending-content .movie-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 cards per row for smaller screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  #trending-content {
+    flex-direction: column; /* Stack cards vertically for mobile screens */
+  }
+
+  #trending-content .movie-card {
+    flex: 1 1 100%; /* Single column for mobile screens */
+    max-width: 100%;
+  }
+}
+
+/* Personalized Suggestions Section */
+#suggestions-content {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  gap: 20px; /* Add spacing between cards */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+#suggestions-content .movie-card {
+  flex: 1 1 calc(25% - 20px); /* Ensure 4 cards per row with spacing */
+  max-width: calc(25% - 20px); /* Prevent cards from exceeding 4 per row */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#suggestions-content .movie-card img {
+  width: 100%;
+  height: 150px; /* Reduced image height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#suggestions-content .movie-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+#suggestions-content .movie-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+#suggestions-content .movie-card button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#suggestions-content .movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Personalized Suggestions */
+@media (max-width: 768px) {
+  #suggestions-content .movie-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 cards per row for smaller screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  #suggestions-content {
+    flex-direction: column; /* Stack cards vertically for mobile screens */
+  }
+
+  #suggestions-content .movie-card {
+    flex: 1 1 100%; /* Single column for mobile screens */
+    max-width: 100%;
+  }
+}
+
+/* Watchlist Section */
+#watchlist-content {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow wrapping of cards */
+  gap: 20px; /* Add spacing between cards */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+#watchlist-content .movie-card {
+  flex: 1 1 calc(25% - 20px); /* Ensure 4 cards per row with spacing */
+  max-width: calc(25% - 20px); /* Prevent cards from exceeding 4 per row */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#watchlist-content .movie-card img {
+  width: 100%;
+  height: 150px; /* Reduced image height */
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#watchlist-content .movie-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+#watchlist-content .movie-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+#watchlist-content .movie-card button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#watchlist-content .movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Watchlist */
+@media (max-width: 768px) {
+  #watchlist-content .movie-card {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 cards per row for smaller screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  #watchlist-content {
+    flex-direction: column; /* Stack cards vertically for mobile screens */
+  }
+
+  #watchlist-content .movie-card {
+    flex: 1 1 100%; /* Single column for mobile screens */
+    max-width: 100%;
+  }
+}
